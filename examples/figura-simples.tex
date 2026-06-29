@@ -1,0 +1,12 @@
+% Figura única centralizada com caption e label.
+% Requer: \usepackage{graphicx} e \graphicspath{{figures/}} no preâmbulo.
+% Coloque o arquivo em figures/ (PDF vetorial é preferível a PNG/JPG).
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{exemplo}
+  \caption{Descrição da figura.}
+  \label{fig:exemplo}
+\end{figure}
+
+% Refira no texto como: a Figura~\ref{fig:exemplo} mostra ...

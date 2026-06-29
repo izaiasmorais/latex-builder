@@ -1,0 +1,18 @@
+% Tabela padrão com booktabs (3 réguas horizontais, sem verticais).
+% Requer: \usepackage{booktabs}
+% Copie para dentro de uma seção e adapte. Refira pelo label: \ref{tab:exemplo}.
+
+\begin{table}[h]
+  \centering
+  \caption{Comparação entre opções A, B e C.}
+  \label{tab:exemplo}
+  \begin{tabular}{lrr}
+    \toprule
+    \textbf{Opção} & \textbf{Métrica 1} & \textbf{Métrica 2} \\
+    \midrule
+    A & 0{,}82 & 1{,}43 \\
+    B & 0{,}91 & 1{,}07 \\
+    C & 0{,}77 & 1{,}65 \\
+    \bottomrule
+  \end{tabular}
+\end{table}

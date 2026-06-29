@@ -1,0 +1,23 @@
+% Duas figuras lado a lado, cada uma com seu sub-label.
+% Requer: \usepackage{graphicx} \usepackage{subcaption}
+
+\begin{figure}[h]
+  \centering
+  \begin{subfigure}[t]{0.45\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{esquerda}
+    \caption{Versão esquerda.}
+    \label{fig:par-esq}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[t]{0.45\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{direita}
+    \caption{Versão direita.}
+    \label{fig:par-dir}
+  \end{subfigure}
+  \caption{Comparação entre as duas versões.}
+  \label{fig:par}
+\end{figure}
+
+% Refira a uma específica: Figura~\ref{fig:par-esq}; ou ao conjunto: Figura~\ref{fig:par}.

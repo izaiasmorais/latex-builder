@@ -1,0 +1,102 @@
+% Modelo genérico de artigo no formato SBC.
+% Classe article + sbc-template. Compile com: ./compile.sh   ou   make build
+% Veja README.md deste diretório para detalhes.
+
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric}
+\usepackage{url}
+\usepackage{hyperref}
+
+\graphicspath{{figures/}}
+
+\renewcommand{\arraystretch}{1.3}
+
+\sloppy
+
+\lstdefinelanguage{json}{
+  basicstyle=\ttfamily\small,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=8pt,
+  showstringspaces=false,
+  breaklines=true,
+  frame=single,
+  literate=
+    *{0}{{{\color{blue}0}}}{1}{1}{{{\color{blue}1}}}{1}{2}{{{\color{blue}2}}}{1}
+     {3}{{{\color{blue}3}}}{1}{4}{{{\color{blue}4}}}{1}{5}{{{\color{blue}5}}}{1}
+     {6}{{{\color{blue}6}}}{1}{7}{{{\color{blue}7}}}{1}{8}{{{\color{blue}8}}}{1}
+     {9}{{{\color{blue}9}}}{1}
+     {:}{{{\color{red}{:}}}}{1}
+     {,}{{{\color{red}{,}}}}{1}
+     {\{}{{{\color{red}{\{}}}}{1}
+     {\}}{{{\color{red}{\}}}}}{1}
+     {[}{{{\color{red}{[}}}}{1}
+     {]}{{{\color{red}{]}}}}{1}
+     {á}{{\'a}}{1}{à}{{\`a}}{1}{â}{{\^a}}{1}{ã}{{\~a}}{1}
+     {é}{{\'e}}{1}{ê}{{\^e}}{1}{í}{{\'i}}{1}
+     {ó}{{\'o}}{1}{ô}{{\^o}}{1}{õ}{{\~o}}{1}
+     {ú}{{\'u}}{1}{ç}{{\c c}}{1}
+     {Á}{{\'A}}{1}{Â}{{\^A}}{1}{Ã}{{\~A}}{1}{É}{{\'E}}{1}
+     {Í}{{\'I}}{1}{Ó}{{\'O}}{1}{Õ}{{\~O}}{1}{Ú}{{\'U}}{1}{Ç}{{\c C}}{1},
+}
+
+\title{Título do Artigo: Um Modelo no Formato SBC}
+
+\author{Primeiro Autor\inst{1}, Segundo Autor\inst{2}}
+
+\address{Instituto ou Departamento -- Universidade de Exemplo (UNEX)
+\\ Cidade, Estado -- País
+\\ \inst{2}Outra Instituição -- Outra Cidade, Estado -- País
+  \email{primeiro.autor@exemplo.br, segundo.autor@exemplo.br}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  This is a generic article template in the SBC format. The abstract should have
+  between 150 and 200 words and summarize the work in a single paragraph: the
+  context and the problem, the proposed solution, the approach or methodology, and
+  the main results or contributions. Replace this text with the abstract of your
+  own article. The Portuguese version (\textit{resumo}) follows the same structure
+  and is presented just below.
+\end{abstract}
+
+\begin{resumo}
+  Este é um modelo genérico de artigo no formato SBC. O resumo deve ter entre 150
+  e 200 palavras e sintetizar o trabalho em um único parágrafo: o contexto e o
+  problema, a solução proposta, a abordagem ou metodologia adotada e os principais
+  resultados ou contribuições. Substitua este texto pelo resumo do seu artigo. A
+  versão em inglês (\textit{abstract}), com estrutura paralela, aparece logo acima.
+\end{resumo}
+
+\input{sections/01-introducao}
+\input{sections/02-referencial-teorico}
+\input{sections/03-trabalhos-relacionados}
+\input{sections/04-abordagem}
+\input{sections/05-experimentos}
+\input{sections/06-conclusao}
+
+\bibliographystyle{sbc}
+\bibliography{refs}
+
+\end{document}

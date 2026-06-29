@@ -1,0 +1,86 @@
+% Template: report, relatório técnico institucional brasileiro.
+% Classe article (numeração 1, 2, 3... via \section), fonte Times, margens ABNT.
+% Compile com: ./compile.sh   ou   make build
+% Veja README.md deste template para detalhes.
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{mathptmx}
+\usepackage[top=3cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[alf]{abntex2cite}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black,citecolor=blue]{hyperref}
+
+\graphicspath{{figures/}}
+
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\renewcommand{\arraystretch}{1.3}
+
+\titleformat{\section}{\normalfont\bfseries}{\thesection.}{0.5em}{\MakeUppercase}
+\titleformat{\subsection}{\normalfont\bfseries}{\thesubsection}{0.5em}{}
+
+\pagestyle{plain}
+
+\lstdefinelanguage{json}{
+  basicstyle=\ttfamily\small,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=8pt,
+  showstringspaces=false,
+  breaklines=true,
+  frame=single,
+  literate=
+    *{0}{{{\color{blue}0}}}{1}{1}{{{\color{blue}1}}}{1}{2}{{{\color{blue}2}}}{1}
+     {3}{{{\color{blue}3}}}{1}{4}{{{\color{blue}4}}}{1}{5}{{{\color{blue}5}}}{1}
+     {6}{{{\color{blue}6}}}{1}{7}{{{\color{blue}7}}}{1}{8}{{{\color{blue}8}}}{1}
+     {9}{{{\color{blue}9}}}{1}
+     {:}{{{\color{red}{:}}}}{1}
+     {,}{{{\color{red}{,}}}}{1}
+     {\{}{{{\color{red}{\{}}}}{1}
+     {\}}{{{\color{red}{\}}}}}{1}
+     {[}{{{\color{red}{[}}}}{1}
+     {]}{{{\color{red}{]}}}}{1},
+}
+
+\begin{document}
+
+\input{sections/00-cabecalho-metadados}
+
+\vspace{1em}
+
+\input{sections/01-introducao}
+\input{sections/02-contextualizacao}
+\input{sections/03-objetivos}
+\input{sections/04-escopo}
+\input{sections/05-arquitetura}
+\input{sections/06-tecnologias}
+\input{sections/07-fluxo}
+\input{sections/08-endpoints}
+\input{sections/09-validacao}
+\input{sections/10-limitacoes}
+\input{sections/11-consideracoes}
+
+\bibliographystyle{abntex2-alf}
+\bibliography{refs}
+
+\end{document}

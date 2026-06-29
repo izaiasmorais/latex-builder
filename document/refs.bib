@@ -1,0 +1,31 @@
+@comment{
+  Bibliografia no estilo SBC (\bibliographystyle{sbc}).
+  Cite no texto com \cite{chave} ou \cite[p. 12]{chave}.
+
+  As duas entradas abaixo são apenas exemplos para o modelo compilar com a
+  bibliografia resolvida. Substitua-as pelas referências do seu artigo.
+
+  Ferramentas úteis (rodar a partir da raiz do repositório):
+   ./scripts/resolve-ref.sh search "<termo>"   -- busca no CrossRef
+   ./scripts/resolve-ref.sh fetch <DOI>         -- baixa BibTeX completo
+   ./scripts/resolve-ref.sh arxiv <id>          -- gera entry a partir do arXiv
+   ./scripts/check.sh citations                 -- citações quebradas/órfãs
+}
+
+@article{exemplo2024,
+  author  = {Sobrenome, Nome and Outro, Autor},
+  title   = {Título do Trabalho de Exemplo},
+  journal = {Revista de Exemplo},
+  volume  = {1},
+  number  = {1},
+  pages   = {1--10},
+  year    = {2024},
+}
+
+@inproceedings{exemplo2023conf,
+  author    = {Autor, Primeiro and Coautor, Segundo},
+  title     = {Outro Trabalho de Exemplo em Conferência},
+  booktitle = {Anais de uma Conferência de Exemplo},
+  year      = {2023},
+  pages     = {100--110},
+}

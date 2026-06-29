@@ -1,0 +1,27 @@
+% Bloco de código com syntax highlight via listings.
+% Requer: \usepackage{listings} \usepackage{xcolor}
+%
+% Para syntax highlight mais bonito, use minted (requer --shell-escape e Pygments).
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  keywordstyle=\bfseries\color{blue!70!black},
+  commentstyle=\itshape\color{gray},
+  stringstyle=\color{green!50!black},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  frame=single,
+  breaklines=true,
+  showstringspaces=false,
+  tabsize=2,
+}
+
+\begin{lstlisting}[language=Python, caption={Hello world em Python.}, label={lst:hello}]
+def saudar(nome: str) -> str:
+    return f"Olá, {nome}!"
+
+if __name__ == "__main__":
+    print(saudar("mundo"))
+\end{lstlisting}
+
+% Refira como: a Listagem~\ref{lst:hello} mostra ...

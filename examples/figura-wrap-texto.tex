@@ -1,0 +1,14 @@
+% Figura com texto fluindo ao redor (à direita do parágrafo).
+% Requer: \usepackage{wrapfig}
+% Use com moderação: quebra mal em quebras de página.
+
+\begin{wrapfigure}{r}{0.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth]{exemplo}
+  \caption{Figura ao lado do texto.}
+  \label{fig:wrap}
+\end{wrapfigure}
+
+Texto do parágrafo que continua. O conteúdo aqui flui ao redor da figura
+à direita. Mantenha o parágrafo longo o suficiente para preencher pelo
+menos a altura da imagem, senão o layout fica esquisito.

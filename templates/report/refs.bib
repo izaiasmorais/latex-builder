@@ -1,0 +1,40 @@
+@comment{
+  Bibliografia (ABNT, via abntex2cite alf - autor-data).
+
+  Resolva referencias automaticamente com:
+    ./scripts/resolve-ref.sh search "termo de busca"
+    ./scripts/resolve-ref.sh fetch <DOI>
+    ./scripts/resolve-ref.sh arxiv <id>
+
+  Cite no texto com:
+    \cite{chave}          -> (Autor, Ano)
+    \citeonline{chave}    -> Autor (Ano)
+    \cite[p. 12]{chave}   -> com pagina
+
+  Exemplos de entradas (descomente e adapte):
+
+  @article{exemploArticle,
+    author  = {Sobrenome, Nome},
+    title   = {Titulo do artigo},
+    journal = {Nome da Revista},
+    year    = {2025},
+    volume  = {1},
+    number  = {2},
+    pages   = {1--10},
+  }
+
+  @inproceedings{exemploConf,
+    author    = {Sobrenome, Nome and Outro, Autor},
+    title     = {Titulo do trabalho},
+    booktitle = {Anais do Evento},
+    year      = {2025},
+    pages     = {100--110},
+  }
+
+  @misc{exemploMisc,
+    author = {Autor},
+    title  = {Documentacao tecnica},
+    year   = {2025},
+    note   = {Disponivel em: \url{https://exemplo.com}},
+  }
+}

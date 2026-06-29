@@ -1,0 +1,36 @@
+\section{Experimentos}
+\label{sec:experimentos}
+
+Reserve de uma a duas páginas para a avaliação. Uma combinação eficaz costuma
+ser uma tabela de métricas, um gráfico e um parágrafo de discussão que
+interprete os números, e não apenas os repita.
+
+\subsection{Metodologia}
+\label{sec:experimentos:metodologia}
+
+Descreva o conjunto de dados, os modelos ou algoritmos comparados, os
+hiperparâmetros, as métricas, o hardware utilizado e tudo o que for necessário
+para reproduzir os resultados.
+
+\subsection{Resultados}
+\label{sec:experimentos:resultados}
+
+Apresente os resultados e analise-os de forma crítica. A Tabela~\ref{tab:resultados}
+ilustra um formato possível para reportar métricas por configuração.
+
+\begin{table}[H]
+  \centering
+  \caption{Resultados comparativos entre as configurações avaliadas.}
+  \label{tab:resultados}
+  \begin{tabular}{lcc}
+    \toprule
+    Configuração & Métrica A & Métrica B \\
+    \midrule
+    Linha de base   & 0{,}71 & 0{,}65 \\
+    Proposta        & 0{,}88 & 0{,}82 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Comente o que os números revelam, em que condições a proposta supera a linha de
+base e quais limitações ainda persistem.

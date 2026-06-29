@@ -1,0 +1,32 @@
+% Template: article — documento genérico em PT-BR.
+% Snippets de tabela, figura, código e equação em ../examples/.
+% Compile com ./compile.sh ou ./watch.sh (recompila a cada save).
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{lmodern}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\graphicspath{{figures/}}
+
+\title{Título do Documento}
+\author{Seu Nome}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\input{sections/01-introducao}
+
+% \bibliographystyle{plain}
+% \bibliography{refs}
+
+\end{document}

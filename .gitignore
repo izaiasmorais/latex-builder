@@ -1,0 +1,36 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.lof
+*.lot
+*.out
+*.synctex.gz
+*.toc
+*.dvi
+*.nav
+*.snm
+*.vrb
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Backups
+*~
+*.swp
+*.bak
+
+# PDF gerado — usar artifact do CI ou compilar localmente
+main.pdf
+
+# Export Overleaf gerado
+document-overleaf.zip
+
+# Claude Code: overrides pessoais (não compartilhar)
+.claude/settings.local.json

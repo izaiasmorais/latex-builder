@@ -1,0 +1,29 @@
+% Tabela que quebra entre páginas. Use quando a tabela passar de uma página.
+% Requer: \usepackage{longtable} \usepackage{booktabs}
+
+\begin{longtable}{lrr}
+  \caption{Tabela longa que quebra entre páginas.}
+  \label{tab:longa} \\
+  \toprule
+  \textbf{Item} & \textbf{Valor 1} & \textbf{Valor 2} \\
+  \midrule
+  \endfirsthead
+
+  \multicolumn{3}{c}{\textit{Continuação da Tabela~\ref{tab:longa}}} \\
+  \toprule
+  \textbf{Item} & \textbf{Valor 1} & \textbf{Valor 2} \\
+  \midrule
+  \endhead
+
+  \midrule
+  \multicolumn{3}{r}{\textit{Continua na próxima página}} \\
+  \endfoot
+
+  \bottomrule
+  \endlastfoot
+
+  Linha 1 & 10 & 20 \\
+  Linha 2 & 11 & 21 \\
+  Linha 3 & 12 & 22 \\
+  % ... repita conforme necessário
+\end{longtable}
