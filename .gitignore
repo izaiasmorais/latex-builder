@@ -26,8 +26,8 @@ Thumbs.db
 *.swp
 *.bak
 
-# PDF gerado — usar artifact do CI ou compilar localmente
-main.pdf
+# main.pdf da raiz é versionado; ignora só a cópia de build dentro de document/
+/document/main.pdf
 
 # Export Overleaf gerado
 document-overleaf.zip
